@@ -1,0 +1,86 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+
+<body>
+  <h1>Forbes 2022 Billionaires</h1>
+
+  <div id="main-container">
+    <div id="sidebar">
+      <button class="selected" onclick="handleSceneChange(this)">Slide 1: Billionaires' Total Networth in Top 10 Countries</button>
+      <button onclick="handleSceneChange(this)">Slide 2: Billionaires in Different Industries</button>
+      <button onclick="handleSceneChange(this)">Slide 3: Billionaires' Industries in Different Countries</button>
+    </div>
+
+    <div id="scene-container">
+      <div id="scene-1" class="scene selected">
+        <h2>Billionaires' Total Networth in Top 10 Countries</h2>
+        <p>Here we ranked the top 10 countries that have the most total networth. Same color will be used in the next slide to indicate if a billionaire is from one of the top 10 countries.</p>
+      </div>
+      <div id="scene-2" class="scene">
+        <h2>Billionaires in Different Industries</h2>
+        <label>
+          Please choose the industry you are interested in:
+          <select name="industry" id="industry" onchange="handleIndustryChange(this)">
+            <option value="">All Industries</option>
+            <option value="Automotive">Automotive</option>
+            <option value="Technology">Technology</option>
+            <option value="Fashion & Retail">Fashion & Retail</option>
+            <option value="Finance & Investments">Finance & Investments</option>
+            <option value="diversified">diversified</option>
+            <option value="Media & Entertainment">Media & Entertainment</option>
+            <option value="Telecom">Telecom</option>
+            <option value="Food & Beverage">Food & Beverage</option>
+            <option value="Finance & Investments">Finance & Investments</option>
+            <option value="Logistics">Logistics</option>
+            <option value="Real Estate">Real Estate</option>
+            <option value="Metals & Mining">Metals & Mining</option>
+            <option value="Manufacturing">Manufacturing</option>
+            <option value="Gambling & Casinos">Gambling & Casinos</option>
+            <option value="Healthcare">Healthcare</option>
+            <option value="Service">Service</option>
+            <option value="Energy">Energy</option>
+            <option value="Construction & Engineering">Construction & Engineering</option>
+          </select>
+        </label>
+        <span>x-axis: age</span>
+        <span>y-axis: networth in billions</span>
+        <p>The darker the blue, it means that the billionaire is from a country that has the most total net worth among other countries</p>
+      </div>
+      <div id="scene-3" class="scene">
+        <h2>Billionaires' Industries in Different Countries</h2>
+        <label>
+          Please choose the country you are interested in (For simplicity I only provided 10 options):
+          <select name="country" id="country" onchange="handleCountryChange(this)">
+            <option value="">All Countries</option>
+            <option value="United States">United States</option>
+            <option value="China">China</option>
+            <option value="India">India</option>
+            <option value="Germany">Germany</option>
+            <option value="France">France</option>
+            <option value="Hong Kong">Hong Kong</option>
+            <option value="Russia">Russia</option>
+            <option value="Canada">Canada</option>
+            <option value="Australia">Australia</option>
+            <option value="United Kingdom">United Kingdom</option>
+          </select>
+        </label>
+      </div>
+
+      <button id="next-scene" onclick="handleNextScene()">Next Scene</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>

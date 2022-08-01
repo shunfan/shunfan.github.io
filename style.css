@@ -1,0 +1,40 @@
+#main-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+#sidebar {
+  width: 400px;
+  border-right: 1px solid black;
+  margin-right: 1rem;
+}
+
+#sidebar > button {
+  width: 100%;
+  padding: 1rem;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+#sidebar > button.selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.scene {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+#scene-container > .scene {
+  display: none;
+}
+
+#scene-container > .scene.selected {
+  display: flex;
+}
